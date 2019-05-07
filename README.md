@@ -77,6 +77,20 @@ Put this in your book.json:
 }
 And you’re done! -->
 
+   "prism": {
+            "css": [
+                <!-- "prism-themes/themes/prism-base16-ateliersulphurpool.light.css" -->
+                "prismjs/themes/prism-solarizedlight.css"
+            ],
+            "lang": {
+                "flow": "typescript"
+            },
+            "ignore": [
+                "mermaid",
+                "eval-js"
+            ]
+        },
+
 贴一下我的book.json
 
 cat book.json
@@ -562,3 +576,13 @@ $ echo $PATH
 $ gitbook pdf
 
 将在根目录下生成了 book.pdf 文件
+
+
+
+  "include-codeblock": {
+            "template":"./path/to/custom.hbs",
+            "unindent": true,
+            "theme": "monokai",
+            "edit": true
+            
+        },

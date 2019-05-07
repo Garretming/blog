@@ -7,7 +7,8 @@
     "head_title": "统一规范化保存笔记",
     "head_description": "wiki",
     "head_keywords": "gitbook,文档部署",
-    "gitbook": ">= 3.0.0",
+    "gitbook": "3.2.3",
+    "key":"gitbook",
     "links":{
         "siderbar":"clark-xm.xyz"
     },
@@ -50,11 +51,20 @@
         "custom-favicon",
         "-gitalk","-disqus",
         "-theme-official",
-        "-sitemap-general"
+        "-sitemap-general",
+        "terminal",
+        "versions-select",
+        "rss",
+        "include-codeblock","ace",
+        "edit-link",
+        "-musicxml"
+        
+
 
         
     ],
     "pluginsConfig": {
+       
         "theme-default": {
             "showLevel": true
         },
@@ -152,13 +162,57 @@
               "className": "info"
             }
         },
-        "favicon": "./assets/website/images/favicon.ico",
+        "favicon":"./assets/website/images/favicon.ico",
         "hide-element": {
             "elements": [".gitbook-link"]
         },
         "sitemap-general": {
             "prefix": "http://clark-xm.xyz/"
+        },
+        "terminal": {
+            "copyButtons": true,
+            "fade": false,
+            "style": "flat"
+        },
+        "edit-link": {
+            "base": "https://github.com/Garretming/gitbook-use/edit/master",
+            "label": "Edit This Page"
+        },
+        "sectionx": {
+            "tag": "b"
+        },
+        "rss": {
+            "title": "GitBook 使用教程",
+            "description": "记录 GitBook 的配置和一些插件的使用",
+            "author": "clark",
+            "feed_url": "http://gitbook.clark-xm.xyz/rss",
+            "site_url": "http://gitbook.clark-xm.xyz/",
+            "managingEditor": "me@clark-xm.xyz",
+            "webMaster": "me@clark-xm.xyz",
+            "categories": [
+                "gitbook"
+            ]
+        },
+        "include-codeblock": {
+            "template":"ace",
+            "unindent": true,
+            "theme": "monokai",
+            "edit": true
+            
+        },
+        "versions": {
+            "key": [
+                {
+                    "value": "http://gitbook.clark-xm.xyz",
+                    "text": "v3.2.3"
+                },
+                {
+                    "value": "http://gitbook.clark-xm.xyz/v2/",
+                    "text": "v2.6.4"
+                }
+            ]
         }
+        
 
       
 
