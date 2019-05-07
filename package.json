@@ -1,0 +1,29 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Garretming/blog.git"
+  },
+  "keywords": [
+    "gitbook"
+  ],
+  "author": "clark'",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Garretming/blog/issues"
+  },
+  "homepage": "https://github.com/Garretming/blog#readme",
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  },
+  "dependencies": {
+    "gitbook-cli": "^2.3.2",
+    "gulp": "^4.0.2"
+  }
+}
