@@ -11,6 +11,9 @@ npm audit
 gitbook init   #会自动create SUMMARY.md 
 
 
+配置book.json   https://github.com/Garretming/blog
+
+
 
 #npm install gitbook-plugin-插件名,
 npm install gh-pages --save-dev   #发布测试工具
@@ -21,3 +24,6 @@ gitbook install
 gitbook build
 
 gh-pages -d _book
+
+
+访问 https://Garretming.github.io/blog/
