@@ -44,6 +44,22 @@ gitbook -V
 
 book.json
 
+默认插件
+GitBook 默认带有5个插件：
+highlight
+search
+sharing
+fontsettings
+livereload
+如果要去除自带的插件，可以在插件名称前面加 -：
+"plugins": [
+"-search"
+]
+
+如果想配置直接在 pluginsConfig 配置。
+
+
+
 book.json是gitbook的配置文件，包括插件的配置文件，通过插件可以丰富电子书的功能，有兴趣的可以去官方找找，很多很有意思的插件（插件越多js文件越多，我的vps流量计费，所以我的是乞丐版 T T）
 <!-- plugin-github
 Display a link to your GitHub repo in your gitbook.
@@ -498,3 +514,51 @@ gh-pages -d _book
 
 参考此书籍,总结完善后发表本文,并将[此本书发布在Github Pages上](https://Garretming.github.io/gitbook/).
 
+
+
+gitbook theme的——layout文件夹中的模板用来干什么的，最终的是怎么样和自己编写的markdown
+文件内容结合起来一起输出html文件的。
+
+https://github.com/lijiaocn/theme-lijiaocn
+
+How to remove “Published with Gitbook” #1404中提供两个方法，第二个修改模板的方法更好。
+
+将GitbookIO/theme-default中的_layouts目录下载到你自己的gitbook目录中。
+
+在自己的gitbook目录下，将_layouts/website/summary.html中的：
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GITBOOK_LINK
+        </a>
+    </li>
+修改为：
+
+    <li>
+        <a href="https://www.lijiaocn.com" target="blank" class="gitbook-link">
+           以上内容由 www.lijiaocn.com 提供
+        </a>
+    </li>
+
+
+    4. 安装calibre插件
+玩过kindle的都知道，calibre是一款非常方便的开源电子书转换软件。在这里，我们也是用到ebook-convert这个插件。
+首先在calibre官网下载插件，下载链接：https://calibre-ebook.com/download。下载适合自己系统的版本。
+下载到电脑之后我做了很多尝试，刚下载之后我兴冲冲的去使用gitbook pdf . mypdf.pdf指令，结果发现提示ebook-convert未安装。
+
+配置 Calibre 环境变量
+如何配置环境变量参考这里，在 .bash_profile 文件加入：
+# Calibre
+export PATH=/Applications/calibre.app/Contents/MacOS:$PATH
+
+更新刚配置的环境变量：
+$ source .bash_profile
+
+查看所有的配置路径：
+$ echo $PATH
+
+输出 PDF 文件
+命令行：
+$ gitbook pdf
+
+将在根目录下生成了 book.pdf 文件

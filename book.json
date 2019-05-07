@@ -34,7 +34,7 @@
         "tbfed-pagefooter",
         "page-copyright",
         "sectionx",
-        
+        "-fontsettings",
         
         
         "ancre-navigation",
@@ -48,11 +48,16 @@
         "lightbox",
         "click-reveal",
         "custom-favicon",
-        "-gitalk","-disqus"
+        "-gitalk","-disqus",
+        "-theme-official",
+        "-sitemap-general"
 
         
     ],
     "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
         "insert-logo": {
           "url": "./assets/website/images/logo.png",
           "style": "background: none; max-height: 30px; min-height: 30px"
@@ -150,6 +155,9 @@
         "favicon": "./assets/website/images/favicon.ico",
         "hide-element": {
             "elements": [".gitbook-link"]
+        },
+        "sitemap-general": {
+            "prefix": "http://clark-xm.xyz/"
         }
 
       
