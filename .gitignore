@@ -28,6 +28,10 @@ node_modules
 *.swp
 
 _assets
+!_assets
+
+/.vscode/
+/.settings/
 
 _book/
 book.pdf

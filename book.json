@@ -8,7 +8,7 @@
     "head_description": "wiki",
     "head_keywords": "gitbook,文档部署",
     "gitbook": "3.2.3",
-    "key":"gitbook",
+    "output.name": "site",
     "links":{
         "siderbar":"clark-xm.xyz"
     },
@@ -20,11 +20,14 @@
         "epub": "./assets/website/epub.css"
     },
     "plugins": [
+        "theme-api","theme-comscore","theme-default","theme-faq",
+        "search-pro",
         "-insert-logo",
+        "-highlight","prism","prism-themes",
         "code",
         "copy-code-button",
         "github" ,
-        "-lunr", "-search", "search-pro",
+        "-lunr", "-search","search-plus",
         "-back-to-top-button","-page-toc-button","simple-page-toc",
         "chapter-fold",
         "-expandable-chapters-small","-page-treeview","-expandable-chapters",
@@ -36,8 +39,6 @@
         "page-copyright",
         "sectionx",
         "-fontsettings",
-        
-        
         "ancre-navigation",
         "klipse",
         "donate",
@@ -52,21 +53,33 @@
         "-gitalk","-disqus",
         "-theme-official",
         "-sitemap-general",
-        "terminal",
+        "-terminal",
         "versions-select",
-        "rss",
+        "-rss",
         "include-codeblock","ace",
         "edit-link",
-        "-musicxml"
-        
+        "-musicxml",
+        "local-video"
 
-
-        
     ],
     "pluginsConfig": {
+        "theme-api": {
+            "theme": "dark"
+        },
+        
        
         "theme-default": {
             "showLevel": true
+        },
+        "fontsettings": {
+            "theme": "sepia",
+            "family": "serif",
+            "size":  1
+        },
+        "prism": {
+            "css": [
+                "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
+            ]
         },
         "insert-logo": {
           "url": "./assets/website/images/logo.png",
@@ -162,7 +175,7 @@
               "className": "info"
             }
         },
-        "favicon":"./assets/website/images/favicon.ico",
+        "favicon":  "assets/website/images/favicon.ico",
         "hide-element": {
             "elements": [".gitbook-link"]
         },
@@ -175,7 +188,7 @@
             "style": "flat"
         },
         "edit-link": {
-            "base": "https://github.com/Garretming/gitbook-use/edit/master",
+            "base": "https://github.com/Garretming/blog/edit/master",
             "label": "Edit This Page"
         },
         "sectionx": {
@@ -201,7 +214,7 @@
             
         },
         "versions": {
-            "key": [
+            "options": [
                 {
                     "value": "http://gitbook.clark-xm.xyz",
                     "text": "v3.2.3"
